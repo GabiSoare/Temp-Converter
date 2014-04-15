@@ -1,101 +1,47 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
-body {
+html,body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
-    background-attachment:fixed;
+    /*background-color:#4B946A;*/
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
-    width:100%;
-}
+    width:100%;	
 
+}
+body {
+    font-size:2em;
+    position:relative;
+    margin-top:45%;
+    margin-bottom:auto;
+}
+#body{
+	margin-left:10%;
+	margin-right:10%;
+}
+html {
+	font-size:30%;
+}
+@font-face {
+    font-family: 'GochiHand-Regular';
+    src: url('../fonts/GochiHand-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 /* Portrait layout (default) */
 .app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
-}
+    font-family:'GochiHand-Regular';
+ 	vertical-align:middle;
+ 	font-size:250%;
+ 	margin-top:30%;
+ }
 
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
-    }
-}
-
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
-}
-
-.event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
-}
-
-.event.listening {
-    background-color:#333333;
-    display:block;
-}
-
-.event.received {
-    background-color:#4B946A;
-    display:none;
-}
 
 @keyframes fade {
     from { opacity: 1.0; }
@@ -108,8 +54,107 @@ h1 {
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+@media (min-width: 300px) {
+    html { font-size: 35%; }
+}
+
+@media (min-width: 500px) {
+    html { font-size: 60%; }
+}
+
+@media (min-width: 700px) {
+    html { font-size: 90%; }
+}
+@media (min-width: 1000px) {
+    html { font-size: 134%; }
+}
+@media (min-width: 1200px) {
+    html { font-size: 155%; }
+}
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+}
+#backgroundTitle {
+	color: #FFFFFF;
+	text-align:center;
+
+}
+
+#Cent-Div{
+    height:100%;
+    width:100%;
+    vertical-align:middle;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+#imgback{
+    margin-left: auto;
+    margin-right: auto;
+}
+#txtTitle{
+	background-color: #3071a9;
+	border-radius: .25em;
+	color: #fff;
+	font-size:220%;
+	font-weight: bold;
+	margin-top:auto;
+	margin-bottom: auto;
+	margin-left:auto;
+    margin-right:auto;
+	padding: .2em .6em .3em;
+	vertical-align:top;
+	width:100%;
+	text-align:center;
+}
+
+.form-control{
+	width:100%;
+}
+#tbl{
+	display:table;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	vertical-align:middle;
+}
+#tblLeft{
+	vertical-align:middle;
+	margin-top:auto;
+	margin-bottom: auto;
+	display:table-cell;
+	float: left;
+	width:90%;
+	height:100%;
+	margin-right:auto;
+	margin-left:5%;
+
+}
+
+#tblRight{
+	vertical-align:middle;
+	background-image: url(../img/thermo.jpg);
+	background-position:middle;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	display:table-cell;
+	margin-left: auto;
+	margin-right:5%;
+	margin-top: auto;
+	margin-bottom:auto;
+	width:10%;	
+	z-index:-1;
+}
+
+.input-group-addon{
+	font-size:220%;
+	height:100%;
+	width:30%;
+}
+.form-control{
+	height:100%;
+	width:70%;
+	font-size:200%;
 }
